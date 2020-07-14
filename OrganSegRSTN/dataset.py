@@ -75,7 +75,7 @@ class DataLayer(data.Dataset):
             label1 = np.load(self.label_filename[self.index1])
             width = label1.shape[0]
             height = label1.shape[1]
-            image = np.repeat(image1.reshape(1, width, height), 3, axis=0)
+            image = np.repeat(image1.reshape(1, width, height), 1, axis=0)
             label = label1.reshape(1, width, height)
         elif self.slice_thickness == 3:
             image0 = np.load(self.image_filename[self.index0])
